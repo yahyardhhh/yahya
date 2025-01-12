@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ines Clothing - Redefining Style</title>
+    <title>Ines Clothing | Welcome</title>
     <style>
         body {
             margin: 0;
@@ -30,7 +30,6 @@
             text-align: center;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s ease;
         }
 
         nav a {
@@ -45,11 +44,6 @@
             color: #ff9800;
         }
 
-        /* Sticky Navigation Change on Scroll */
-        body.scrolled nav {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
         /* Hero Section */
         .hero {
             position: relative;
@@ -62,21 +56,6 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            animation: backgroundMove 10s infinite linear;
-        }
-
-        @keyframes backgroundMove {
-            0% {
-                background-position: center;
-            }
-
-            50% {
-                background-position: left;
-            }
-
-            100% {
-                background-position: center;
-            }
         }
 
         .hero::before {
@@ -138,83 +117,6 @@
             background-color: #e68a00;
         }
 
-        /* Product Section */
-        .products {
-            padding: 60px;
-            text-align: center;
-            background-color: #f0f0f0;
-            animation: fadeInSection 2s forwards;
-        }
-
-        @keyframes fadeInSection {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .products h2 {
-            margin-bottom: 30px;
-            animation: fadeIn 2s ease;
-            font-size: 2.5em;
-        }
-
-        .product-grid {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            opacity: 0;
-            animation: fadeInUp 1s forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .product {
-            width: 220px;
-            text-align: center;
-            background-color: #ffffff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .product:hover {
-            transform: scale(1.05);
-            /* Slight zoom effect */
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .product img {
-            width: 100%;
-            height: auto;
-        }
-
-        .product p {
-            margin: 15px;
-            font-size: 1em;
-            color: #666;
-        }
-
-        /* Blog Section */
-        #blog {
-            animation-delay: 1s;
-        }
-
         /* Footer */
         footer {
             background-color: #222;
@@ -224,23 +126,6 @@
             background-image: url('path-to-footer-background.jpg');
             background-size: cover;
             background-position: center;
-            animation: footerBounce 2s ease-in-out;
-        }
-
-        @keyframes footerBounce {
-            0% {
-                transform: translateY(10px);
-                opacity: 0;
-            }
-
-            50% {
-                transform: translateY(-10px);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(0);
-            }
         }
 
         footer a {
@@ -250,6 +135,65 @@
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 10px;
+            }
+
+            nav a {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+
+            .hero {
+                height: 80vh;
+                background-position: top;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+
+            .hero-content p {
+                font-size: 1.2em;
+            }
+
+            .hero-buttons a {
+                padding: 8px 18px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 12px 8px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin: 0 8px;
+            }
+
+            .hero {
+                height: 70vh;
+                background-position: top;
+            }
+
+            .hero-content h1 {
+                font-size: 2em;
+            }
+
+            .hero-content p {
+                font-size: 1em;
+            }
+
+            .hero-buttons a {
+                padding: 6px 16px;
+                font-size: 0.85em;
+            }
         }
     </style>
 </head>
@@ -277,51 +221,10 @@
         </div>
     </div>
 
-    <!-- New Arrivals Section -->
-    <section id="new-arrivals" class="products">
-        <h2>New Arrivals</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="photo1.jpeg" alt="New Arrival 1">
-                <p>New Arrival 1</p>
-            </div>
-            <div class="product">
-                <img src="photo2.jpeg" alt="New Arrival 2">
-                <p>New Arrival 2</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="products">
-        <h2>Style Tips & Trends</h2>
-        <article>
-            <h3>How to Style Your Wardrobe for the Season</h3>
-            <p>Get the latest fashion tips and tricks for every season...</p>
-            <a href="#">Read More</a>
-        </article>
-        <article>
-            <h3>Top Fashion Trends You Can't Miss</h3>
-            <p>Discover the hottest trends dominating the fashion world...</p>
-            <a href="#">Read More</a>
-        </article>
-    </section>
-
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Ines Clothing. All Rights Reserved. <a href="#">Privacy Policy</a></p>
     </footer>
-
-    <script>
-        // Add a scroll event to change the nav bar's background
-        window.onscroll = function () {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.body.classList.add("scrolled");
-            } else {
-                document.body.classList.remove("scrolled");
-            }
-        };
-    </script>
 
 </body>
 
